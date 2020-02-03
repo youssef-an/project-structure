@@ -1,0 +1,94 @@
+$statesColors: (
+  "danger": #f03a49,
+  "success": #35d88c,
+  "info": #3accf0,
+  "warning": #f0cf3a
+);
+
+.btn {
+  padding: 12px 20px;
+  background: $black;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 2px 16px -4px rgba($black, 0.8);
+  transition: all 0.4s ease;
+
+  &.main {
+    background: $main-color;
+    box-shadow: 0 2px 16px -4px rgba($main-color, 0.6);
+    border: 2px solid $main-color;
+    color: #fff;
+
+    &:hover {
+      border: 2px solid $main-color-dark;
+      background: $main-color-dark;
+      box-shadow: 0 2px 16px -4px rgba($main-color-dark, 0.6);
+    }
+
+    @each $state, $color in $statesColors {
+      &.#{$state} {
+        box-shadow: 0 2px 16px -4px rgba($color, 0.6);
+        background: $color;
+        border: 2px solid $color;
+
+        &:hover {
+          box-shadow: 0 2px 16px -4px rgba(darken($color, 14%), 0.6);
+          background: darken($color, 14%);
+          border: 2px solid darken($color, 14%);
+        }
+      }
+    }
+  }
+
+  &.accent {
+    background: none;
+    box-shadow: 0 2px 16px -4px rgba($light-gray, 0.4);
+    color: $gray;
+    border: 2px solid $light-gray;
+
+    &:hover {
+      box-shadow: 0 2px 16px -4px rgba($light-gray, 0.4);
+      color: $black;
+      border: 2px solid $gray;
+    }
+
+    @each $state, $color in $statesColors {
+      &.#{$state} {
+        box-shadow: 0 2px 16px -4px rgba($color, 0.4);
+        color: $color;
+        border: 2px solid $color;
+
+        &:hover {
+          box-shadow: 0 2px 16px -4px rgba(darken($color, 14%), 0.4);
+          color: darken($color, 14%);
+          border: 2px solid darken($color, 14%);
+        }
+      }
+    }
+  }
+
+  &.link {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: $main-color;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    @each $state, $color in $statesColors {
+      &.#{$state} {
+        color: $color;
+
+        &:hover {
+          color: darken($color, 14%);
+        }
+      }
+    }
+  }
+}

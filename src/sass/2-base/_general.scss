@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  font-family: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  color: $black;
+  line-height: 1.6;
+  font-family: $main-font;
+  background: rgba($light-gray, 0.6);
+}
+
+h1 {
+  font-size: $h1-size;
+  font-weight: $font-bold;
+}
+
+h2 {
+  font-size: $h2-size;
+  font-weight: $font-bold;
+}
+
+h3 {
+  font-size: $h3-size;
+  font-weight: $font-semibold;
+}
+
+h4 {
+  font-size: $h4-size;
+  font-weight: $font-semibold;
+}
+
+h5 {
+  font-size: $h5-size;
+  font-weight: $font-regular;
+}
+
+h6 {
+  font-size: $h6-size;
+  font-weight: $font-regular;
+}
+
+p {
+  font-size: $text-size;
+}

@@ -1,0 +1,12 @@
+@mixin font($fname, $ffilename, $fweight: normal, $fstyle: normal) {
+  @font-face {
+    font-family: $fname;
+    src: url("../fonts/#{$ffilename}");
+    font-weight: $fweight;
+    font-style: $fstyle;
+  }
+}
+
+@mixin shadow($color) {
+  box-shadow: 0 2px 16px rgba($color, 0.4);
+}
